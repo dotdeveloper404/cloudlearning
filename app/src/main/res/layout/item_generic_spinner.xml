@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/spinner_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/colorAppTextPrimary"
+        android:textAlignment="textStart"
+        style="@style/textview_regular_primary"
+        />
+
+    <CheckBox
+        android:id="@+id/spinner_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@android:color/transparent"
+        android:drawable="@drawable/custom_checkbox_drawable" />
+
+</LinearLayout>

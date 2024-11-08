@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.ui.rateUs.RateUsFragment"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:background="@color/colorPrimary"
+        >
+
+
+        <ImageView
+            android:id="@+id/btnCancel"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_cancel_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textview_semi_bold_accent"
+            android:textSize="@dimen/_18ssp"
+            android:text="@string/how_was_your_overall_nexperience"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"/>
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextView_Regular_primary"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/it_will_help_us_to_serve_you_better"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"/>
+
+
+
+        <RadioGroup
+            android:id="@+id/emoji_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/angry_emoji"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/emoji_angry"
+                android:alpha="0.5"
+                android:button="@null"
+                android:text=""
+                android:layout_margin="8dp"/>
+
+            <RadioButton
+                android:id="@+id/sad_emoji"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/emoji_sad"
+                android:button="@null"
+                android:text=""
+                android:alpha="0.5"
+                android:layout_margin="8dp"/>
+
+            <RadioButton
+                android:id="@+id/neutral_emoji"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/emoji_neutral"
+                android:button="@null"
+                android:text=""
+                android:alpha="0.5"
+                android:layout_margin="8dp"/>
+
+            <RadioButton
+                android:id="@+id/happy_emoji"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/emoji_satisfied"
+                android:button="@null"
+                android:text=""
+                android:alpha="0.5"
+                android:layout_margin="8dp"/>
+
+            <RadioButton
+                android:id="@+id/very_happy_emoji"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/emoji_happy"
+                android:button="@null"
+                android:text=""
+                android:alpha="0.5"
+                android:layout_margin="8dp"/>
+
+        </RadioGroup>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/colorAppTextPrimary"/>
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:id="@+id/textWhatswrong"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextView_semi_bold_primary"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/what_is_wrong"
+            android:textAlignment="center"
+
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextView_semi_bold_primary"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/note"
+            android:textAlignment="center"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/recyclerview_background">
+            <EditText
+                android:id="@+id/edit_note"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@android:color/transparent"
+                android:hint="@string/how_can_we_do_better"
+                android:gravity="top|start"
+                style="@style/TextView_Regular_primary"
+                />
+
+        </LinearLayout>
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:id="@+id/text_character_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0_150"
+            android:textSize="@dimen/_11ssp"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_5sdp"
+            style="@style/textView_regular_secondary"/>
+
+
+        <com.sparkmembership.sparkowner.presentation.components.CustomButton
+            android:id="@+id/btnSubmit"
+            style="@style/logoutButtonstyle"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:text="Submit Review" />
+
+
+
+
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/includedProgressLayout"
+        layout="@layout/layout_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</RelativeLayout>
+

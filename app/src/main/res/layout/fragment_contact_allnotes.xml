@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.ui.notes.Allnotes.ContactAllNotesFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_all_notes"
+        />
+
+    <LinearLayout
+        android:id="@+id/notFoundDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_12sdp"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:src="@drawable/all_notes_empty_state"/>
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/No_Data_Found"
+            style="@style/textView_medium_secondary"
+            android:textSize="@dimen/_15sdp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_12sdp"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:src="@drawable/ic_add_item"
+        app:tint="@color/colorWhiteBlack"
+        app:shapeAppearanceOverlay="@style/fab_rounded_shape"
+        app:backgroundTint="@color/colorAccent"/>
+
+    <include
+        android:id="@+id/includedProgressLayout"
+        layout="@layout/layout_progressbar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_nav_graph"
+    app:startDestination="@id/splashFragment"
+    >
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.splash.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
+    </fragment>
+    <!-- Authentication Graph -->
+    <include app:graph="@navigation/auth_nav_graph" />
+
+    <!-- Main Graph -->
+    <include app:graph="@navigation/main_nav_graph" />
+
+</navigation>

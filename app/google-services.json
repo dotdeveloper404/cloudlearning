@@ -1,0 +1,127 @@
+{
+  "project_info": {
+    "project_number": "982630490087",
+    "firebase_url": "https://sparktan-business-app.firebaseio.com",
+    "project_id": "sparktan-business-app",
+    "storage_bucket": "sparktan-business-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982630490087:android:637d18fd73e1c44d6e2742",
+        "android_client_info": {
+          "package_name": "com.sparktan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982630490087-7j0l6n5lup29aad7p98qsiqogpgk3lkn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sparktan",
+            "certificate_hash": "f00b324a779eb9b4c0676cf8bed6f259ccce05eb"
+          }
+        },
+        {
+          "client_id": "982630490087-ecs4jrpanj1611q3dmaedpq1e07bkjtt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvYw93CcZSmQNkEOID5tO7EljOMYDWDkg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982630490087-ecs4jrpanj1611q3dmaedpq1e07bkjtt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "982630490087-09piuphj1pjvfp0j98nc8puqnn65ijqi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sparkmembership.championTaekwonDo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982630490087:android:0f06f995ef923a696e2742",
+        "android_client_info": {
+          "package_name": "com.sparktan.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982630490087-ecs4jrpanj1611q3dmaedpq1e07bkjtt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvYw93CcZSmQNkEOID5tO7EljOMYDWDkg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982630490087-ecs4jrpanj1611q3dmaedpq1e07bkjtt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "982630490087-09piuphj1pjvfp0j98nc8puqnn65ijqi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sparkmembership.championTaekwonDo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982630490087:android:8a3b0014f36140446e2742",
+        "android_client_info": {
+          "package_name": "com.sparktan.qa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982630490087-ecs4jrpanj1611q3dmaedpq1e07bkjtt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvYw93CcZSmQNkEOID5tO7EljOMYDWDkg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982630490087-ecs4jrpanj1611q3dmaedpq1e07bkjtt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "982630490087-09piuphj1pjvfp0j98nc8puqnn65ijqi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sparkmembership.championTaekwonDo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

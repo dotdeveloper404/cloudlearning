@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.timeslip.TimeSlipsHistory.TimeSlipsHistory">
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/allContactSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_12sdp"
+        android:background="@drawable/search_edittext_background"
+        android:drawableStart="@drawable/ic_search_icon"
+        android:drawablePadding="@dimen/_10sdp"
+        android:hint="@string/search"
+        android:padding="@dimen/_6sdp"
+        android:paddingStart="@dimen/_12sdp"
+        android:textColorHint="@color/colorAppTextPrimary"
+        android:textColor="@color/appTitleColor"
+        android:textSize="@dimen/_10sdp"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_alignParentTop="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/allContactSearchView"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/item_time_slip_history"/>
+
+    <LinearLayout
+        android:id="@+id/notFoundDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_12sdp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_below="@id/allContactSearchView">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:src="@drawable/all_contact_empty_state"/>
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/No_Data_Found"
+            style="@style/textView_medium_secondary"
+            android:textSize="@dimen/_15sdp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/includedProgressLayout"
+        layout="@layout/layout_progressbar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

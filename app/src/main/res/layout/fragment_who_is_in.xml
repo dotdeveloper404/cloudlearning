@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.whoisin.WhoIsInFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp"
+        android:id="@+id/todayDateLayout"
+        >
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:id="@+id/workedHoursLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/worked_hours_today"
+            android:layout_weight="1"
+            style="@style/TextView_medium_primary"
+            />
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:id="@+id/todayDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="August 22, 2024"
+            android:textColor="@color/colorAppTextSecondary"
+            style="@style/TextView_medium_primary"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/circularProgressLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/todayDateLayout">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_centerInParent="true"
+            android:clickable="false"/>
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:id="@+id/totalHoursText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            style="@style/TextView_semi_bold_primary"
+            android:textColor="@color/colorAppTextPrimary"
+            />
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:id="@+id/totalTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total"
+            android:visibility="gone"
+            style="@style/textView_regular_secondary"
+            android:layout_below="@id/totalHoursText"
+            android:textSize="@dimen/_10sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/totalClockedInOutLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/circularProgressLayout"
+        android:orientation="horizontal"
+        >
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:id="@+id/clockInCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/clocked_in_label"
+            android:layout_weight="1"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            style="@style/TextView_Regular_primary"
+            android:paddingStart="@dimen/_10sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableStart="@drawable/green_dot"
+            android:layout_marginBottom="@dimen/_8sdp"
+            />
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:id="@+id/clockOutCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:text="@string/clocked_in_label"
+            android:textAlignment="center"
+            android:textSize="@dimen/_12sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            style="@style/TextView_Regular_primary"
+            android:drawableStart="@drawable/red_dot"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/totalClockedInOutLayout"
+        android:layout_marginBottom="16dp"
+        tools:listitem="@layout/item_staff_member_time_clock"/>
+
+    <LinearLayout
+        android:id="@+id/notFoundDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_12sdp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_below="@id/recyclerView">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:src="@drawable/all_contact_empty_state"/>
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/No_Data_Found"
+            style="@style/textView_medium_secondary"
+            android:textSize="@dimen/_15sdp"
+            android:gravity="center"/>
+    </LinearLayout>
+    <include
+        android:id="@+id/includedProgressLayout"
+        layout="@layout/layout_progressbar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#494D53</color>
+    <color name="colorPrimaryDark">#3A3C40</color>
+    <color name="colorSecondary">#3A3C40</color>
+    <color name="colorAccent">#F75B4D</color>
+    <color name="colorAppTextPrimary">#FFFFFF</color>
+    <color name= "colorAppTextSecondary">#A1A1AA</color>
+    <color name="appTitleColor">#FFFFFF</color>
+    <color name="colorCard">#494D53</color>
+    <color name="colorSearchFilter">#494D53</color>
+    <color name="light_gray">#A1A1AA</color>
+    <color name="colorRecylerviewbg">#3A3C40</color>
+    <color name="colorWhiteBlack">#000000</color>
+    <color name="colorChip">#2C2E32</color>
+    <color name="light_orange">#66666B</color>
+</resources>

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".presentation.ui.contacts.filter.ContactFilterBottomSheetFragment">
+
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        style="@style/medium_primary_text_sub_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:text="@string/filter_contacts" />
+
+    <ImageView
+        android:id="@+id/btnCancel"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_cancel_icon" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnCancel"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                android:id="@+id/contactTypeTitle"
+                style="@style/textview_regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:text="@string/contact_type" />
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                android:id="@+id/spinner_contact_type"
+                style="@style/TextView_Regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@drawable/edittext_rounded_border"
+                android:drawableEnd="@drawable/spinner_dropdown_icon"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/select_contact_type"
+                android:textColor="@color/colorAppTextSecondary" />
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupContactType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:chipSpacing="@dimen/_4sdp"
+                app:singleLine="false"
+                app:singleSelection="false" />
+
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                style="@style/textview_regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:text="@string/contacts_who_are_tagged" />
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                android:id="@+id/spinner_contact_tagged"
+                style="@style/TextView_Regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@drawable/edittext_rounded_border"
+                android:drawableEnd="@drawable/spinner_dropdown_icon"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/select_tagged_contact"
+                android:textColor="@color/colorAppTextSecondary" />
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupContactTagged"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:chipSpacing="8dp"
+                app:singleLine="false"
+                app:singleSelection="false" />
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                style="@style/textview_regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:text="@string/contact_who_are_not_tagged" />
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                android:id="@+id/spinner_contact_not_tagged"
+                style="@style/TextView_Regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@drawable/edittext_rounded_border"
+                android:drawableEnd="@drawable/spinner_dropdown_icon"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/select_contact_not_tagged"
+                android:textColor="@color/colorAppTextSecondary" />
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupContactNotTagged"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:chipSpacing="8dp"
+                app:singleLine="false"
+                app:singleSelection="false" />
+
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                style="@style/textview_regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:text="@string/age_group" />
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                android:id="@+id/spinner_age_group"
+                style="@style/TextView_Regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@drawable/edittext_rounded_border"
+                android:drawableEnd="@drawable/spinner_dropdown_icon"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/select_age_group"
+                android:textColor="@color/colorAppTextSecondary" />
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupAgeGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:chipSpacing="8dp"
+                app:singleLine="false"
+                app:singleSelection="false" />
+
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                style="@style/textview_regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:text="@string/has_birthday_in" />
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                android:id="@+id/spinner_has_birthday"
+                style="@style/TextView_Regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@drawable/edittext_rounded_border"
+                android:drawableEnd="@drawable/spinner_dropdown_icon"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/select_month"
+                android:textColor="@color/colorAppTextSecondary" />
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupHasBirthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:chipSpacing="8dp"
+                app:singleLine="false"
+                app:singleSelection="false" />
+
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                style="@style/textview_regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:text="@string/contacts_entered_acquired_between" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:orientation="horizontal">
+
+                <com.sparkmembership.sparkowner.presentation.components.TextView
+                    android:id="@+id/spinne_start_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_rounded_border"
+                    android:drawableEnd="@drawable/icon_calendar2"
+                    android:hint="@string/start_date"
+                    android:layout_marginEnd="@dimen/_1sdp"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    style="@style/textView_semi_bold_primary_small"
+                    />
+
+                <com.sparkmembership.sparkowner.presentation.components.TextView
+                    android:id="@+id/spinner_end_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_rounded_border"
+                    android:drawableEnd="@drawable/icon_calendar2"
+                    android:hint="@string/end_date"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    style="@style/textView_semi_bold_primary_small"
+                    />
+
+            </LinearLayout>
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                style="@style/textview_regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:text="@string/age_range" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.sparkmembership.sparkowner.presentation.components.EditText
+                    android:id="@+id/editText_mini_age"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_1sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:focusable="true"
+                    android:hint="@string/minimum"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    style="@style/textView_semi_bold_primary_small"
+                    />
+
+                <com.sparkmembership.sparkowner.presentation.components.EditText
+                    android:id="@+id/editText_max_age"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:focusable="true"
+                    android:hint="@string/maximum"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    style="@style/textView_semi_bold_primary_small"
+                    />
+
+
+            </LinearLayout>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupMiniMaxAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:chipSpacing="8dp"
+                app:singleLine="false"
+                app:singleSelection="false" />
+
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                style="@style/textview_regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:text="@string/membership" />
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                android:id="@+id/spinner_membership"
+                style="@style/TextView_Regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@drawable/edittext_rounded_border"
+                android:drawableEnd="@drawable/spinner_dropdown_icon"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/select_membership"
+                android:textColor="@color/colorAppTextSecondary" />
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupMembership"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:chipSpacing="8dp"
+                app:singleLine="false"
+                app:singleSelection="false" />
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                style="@style/textview_regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:text="@string/class_roaster" />
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                android:id="@+id/spinner_class_roaster"
+                style="@style/TextView_Regular_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@drawable/edittext_rounded_border"
+                android:drawableEnd="@drawable/spinner_dropdown_icon"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/select_roaster"
+                android:textColor="@color/colorAppTextSecondary" />
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupClassRoaster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:chipSpacing="8dp"
+                app:singleLine="false"
+                app:singleSelection="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <com.sparkmembership.sparkowner.presentation.components.CustomButton
+                    android:id="@+id/btnResetFilter"
+                    style="@style/cancelButtonstyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:text="@string/reset_filter"
+                    android:textAllCaps="false" />
+
+                <com.sparkmembership.sparkowner.presentation.components.CustomButton
+                    android:id="@+id/btnApplyFilter"
+                    style="@style/logoutButtonstyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:text="Apply Filter"
+                    android:textAllCaps="false" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/includedProgressLayout"
+        layout="@layout/layout_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

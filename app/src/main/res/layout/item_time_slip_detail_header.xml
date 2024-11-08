@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/currentPayPeriodLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Pay Period"
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/_10sdp"
+        android:visibility="gone"
+        android:layout_gravity="start"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:id="@+id/currentPayPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="August 01-31, 2024"
+            android:textColor="@color/colorAppTextPrimary"
+            android:textSize="@dimen/_13ssp"
+            android:layout_weight="1"/>
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:id="@+id/totalMonthTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="53.8 hour(s)"
+            android:textColor="@color/colorAppTextPrimary"
+            android:textSize="@dimen/_13ssp"
+            android:layout_weight="0"/>
+    </LinearLayout>
+
+</LinearLayout>
+

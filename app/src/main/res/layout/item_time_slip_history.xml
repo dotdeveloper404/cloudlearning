@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_user.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/curve_background_item"
+    android:padding="@dimen/_14sdp"
+    android:elevation="2dp"
+    android:id="@+id/timeSlipItem"
+    android:layout_margin="@dimen/_6sdp">
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/tvName"
+        style="@style/textView_medium_secondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Aqib Khan"
+        android:textColor="@color/colorAppTextPrimary"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end">
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:id="@+id/tvLabelDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration"
+            android:textColor="@color/darker_gray"
+            style="@style/textView_regular_secondary"
+            android:textSize="12sp" />
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:id="@+id/tvDuration"
+            style="@style/textView_medium_secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 hr 20 mins"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>
+

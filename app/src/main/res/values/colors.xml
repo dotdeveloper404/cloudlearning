@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorSecondary">#F2F2F2</color>
+    <color name="colorAccent">#F75B4D</color>
+    <color name="colorCard">#FFFFFF</color>
+    <color name="colorAppTextPrimary">#000000</color>
+    <color name="colorAppTextSecondary">#939393</color>
+    <color name="medium_red">#FF5B57</color>
+    <color name="light_red">#FFDEDD</color>
+    <color name="color_onboarding">#FF5B57</color>
+    <color name="light_gray">#A1A1AA</color>
+    <color name="appTitleColor">#000000</color>
+    <color name="colorSelectedSpinner">#FFDEDD</color>
+    <color name="colorSearchFilter">#F2F2F2</color>
+    <color name="colorRecylerviewbg">#FFFFFF</color>
+    <color name="colorButton">#FF5B57</color>
+    <color name="colorWhiteBlack">#FFFFFF</color>
+    <color name="colorChip">#D5D6DC</color>
+    <color name="darker_gray">#787878</color>
+    <color name="light_orange">#FFEAE8</color>
+    <color name="holo_green">#c4ecd4</color>
+    <color name="green">#2AAD59</color>
+    <color name="light_grey">#F6F6F6</color>
+    <color name="light_blue">#3CA4EA</color>
+    <color name="light_pink">#f49ff8</color>
+    <color name="light_peach">#FFBEBA</color>
+        <color name="light_lavender">#fdb3ff</color>
+        <color name="pale_yellow">#f3f696</color>
+        <color name="light_green">#8cfab2</color>
+        <color name="light_sky_blue">#a5c7fd</color>
+        <color name="peachy_orange">#fe9986</color>
+        <color name="deep_magenta">#e269a2</color>
+        <color name="purple">#d080f6</color>
+    <color name="black">#000000</color>
+
+
+</resources>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_orange"
+    tools:context=".presentation.ui.timeclock.TimeClockFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/clockin_out_layout"
+        android:layout_margin="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:background="@drawable/curve_background_item"
+        android:gravity="top|center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                android:id="@+id/itemDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="August 23, 2024"
+                android:layout_weight="1"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                android:layout_gravity="start"
+                style="@style/TextView_Regular_primary"
+                android:textColor="@color/colorAccent"
+                android:paddingStart="@dimen/_10sdp"
+                android:drawableStart="@drawable/icon_calendar2"
+                android:layout_marginBottom="@dimen/_8sdp" />
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                android:id="@+id/clocked_in_text"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:text="Clocked-In"
+                android:textAlignment="center"
+                android:visibility="gone"
+                android:background="@drawable/rounded_background"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+               />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <com.sparkmembership.sparkowner.presentation.components.TextView
+                    android:id="@+id/currentStartTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/textView_regular_secondary"
+                    android:text="@string/lets_get_to_work"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12sdp" />
+
+                <com.sparkmembership.sparkowner.presentation.components.TextView
+                    android:id="@+id/currentTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="09:02 AM"
+                    style="@style/TextView_Regular_primary"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:paddingEnd="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <com.sparkmembership.sparkowner.presentation.components.TextView
+                    android:id="@+id/tvInOutLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/duration"
+                    android:textStyle="bold"
+                    style="@style/textView_regular_secondary"
+                    android:textSize="@dimen/_11sdp" />
+
+                <com.sparkmembership.sparkowner.presentation.components.TextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00 hour(s)"
+                    style="@style/TextView_Regular_primary"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <com.sparkmembership.sparkowner.presentation.components.CustomButton
+            android:id="@+id/clockin_out_button"
+            style="@style/logoutButtonstyle"
+            android:layout_width="match_parent"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:text="Clock In" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/clockin_out_layout"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            android:layout_margin="@dimen/_10sdp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/total_working_hour_layout"
+                android:paddingTop="@dimen/_10sdp"
+                android:background="@drawable/curve_background_item"
+                android:gravity="top|center_horizontal">
+
+                <com.sparkmembership.sparkowner.presentation.components.TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Working hour"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:layout_gravity="start"
+                    style="@style/TextView_semi_bold_primary"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:drawableStart="@drawable/icon_history_work"
+                    android:layout_marginBottom="@dimen/_8sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_13sdp"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.sparkmembership.sparkowner.presentation.components.TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/textView_regular_secondary"
+                            android:text="@string/today"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <com.sparkmembership.sparkowner.presentation.components.TextView
+                            android:id="@+id/todayWorkingHour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00 Hour(s)"
+                            style="@style/TextView_Regular_primary"
+                            android:drawablePadding="@dimen/_2ssp"
+                            android:paddingEnd="@dimen/_5sdp"
+                            android:paddingTop="@dimen/_2ssp"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/_2ssp"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/light_gray"
+                        android:layout_marginHorizontal="@dimen/_5sdp" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <com.sparkmembership.sparkowner.presentation.components.TextView
+                            android:id="@+id/payPeriodLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/this_pay_period"
+                            android:textStyle="bold"
+                            style="@style/textView_regular_secondary"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <com.sparkmembership.sparkowner.presentation.components.TextView
+                            android:id="@+id/totalPayPeriod"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00 Hour(s)"
+                            style="@style/TextView_Regular_primary"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/total_working_hour_layout"
+            tools:listitem="@layout/item_time_slip_detail"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+
+        />
+
+        <LinearLayout
+            android:id="@+id/notFoundDataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:visibility="gone"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_12sdp"
+                android:src="@drawable/all_contact_empty_state"/>
+
+            <com.sparkmembership.sparkowner.presentation.components.TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/No_Data_Found"
+                style="@style/textView_medium_secondary"
+                android:textSize="@dimen/_15sdp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+    <include
+        android:id="@+id/includedProgressLayout"
+        layout="@layout/layout_progressbar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

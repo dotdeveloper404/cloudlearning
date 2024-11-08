@@ -1,0 +1,109 @@
+[versions]
+agp = "8.5.2"
+datastorePreferences = "1.1.1"
+firebaseBom = "33.5.1"
+glide = "4.16.0"
+gson = "2.10.1"
+hiltAndroid = "2.48.1"  # Corrected to match the Hilt version
+hiltAndroidCompiler = "2.48.1"  # Hilt compiler version
+hiltCompiler = "1.2.0"
+imagepicker = "2.1"
+kotlin = "1.9.0"
+coreKtx = "1.15.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+kotlinxCoroutinesCore = "1.7.3"
+kotlinxSerializationJson = "1.6.3"
+lifecycleViewmodelSavedstate = "2.8.7"  # Updated version
+material = "1.12.0"
+activity = "1.9.3"
+constraintlayout = "2.2.0"
+mpandroidchart = "v3.1.0"
+navigationUi = "2.8.3"
+okhttpBom = "4.11.0"
+picasso = "2.8"
+pieChart = "0.7.0"
+playServicesLocation = "21.3.0"
+preferenceKtx = "1.2.1"
+protobufJavalite = "3.25.5"
+retrofit = "2.9.0"
+retrofit2KotlinCoroutinesAdapter = "0.9.2"
+ksp = "2.0.20-1.0.24"
+safeargs = "2.8.3"
+kotlin-parcelize = "2.0.20"
+googleServices = "4.4.2"
+crashlytics = "3.0.2"
+firebasePerf = "20.0.5"
+sdpAndroid = "1.1.1"
+serialization = "1.7.1"
+navigationFragmentKtx = "2.8.3"
+sspAndroid = "1.1.1"
+viewpager2Version = "1.1.0"
+fragment = "1.8.5"
+circularimageview = "4.3.1"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-datastore = { module = "androidx.datastore:datastore", version.ref = "datastorePreferences" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
+androidx-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hiltCompiler" }
+androidx-lifecycle-common-java8 = { module = "androidx.lifecycle:lifecycle-common-java8", version.ref = "lifecycleViewmodelSavedstate" }
+androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleViewmodelSavedstate" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleViewmodelSavedstate" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelSavedstate" }
+androidx-lifecycle-viewmodel-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "lifecycleViewmodelSavedstate" }
+androidx-navigation-ui = { module = "androidx.navigation:navigation-ui", version.ref = "navigationUi" }
+androidx-preference-ktx = { module = "androidx.preference:preference-ktx", version.ref = "preferenceKtx" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+firebase-auth = { module = "com.google.firebase:firebase-auth" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-config-ktx = { module = "com.google.firebase:firebase-config-ktx" }
+firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx" }
+firebase-crashlytics-ktx = { module = "com.google.firebase:firebase-crashlytics-ktx" }
+firebase-messaging-ktx = { module = "com.google.firebase:firebase-messaging-ktx" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
+imagepicker = { module = "com.github.dhaval2404:imagepicker", version.ref = "imagepicker" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesCore" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+mpandroidchart = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "mpandroidchart" }
+okhttp-bom = { module = "com.squareup.okhttp3:okhttp-bom", version.ref = "okhttpBom" }
+picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
+pie-chart = { module = "ir.mahozad.android:pie-chart", version.ref = "pieChart" }
+play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
+protobuf-javalite = { module = "com.google.protobuf:protobuf-javalite", version.ref = "protobufJavalite" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit2-kotlin-coroutines-adapter = { module = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter", version.ref = "retrofit2KotlinCoroutinesAdapter" }
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+
+sdp-android = { module = "com.intuit.sdp:sdp-android", version.ref = "sdpAndroid" }
+ssp-android = { module = "com.intuit.ssp:ssp-android", version.ref = "sspAndroid" }
+viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2Version" }
+androidx-fragment = { group = "androidx.fragment", name = "fragment", version.ref = "fragment" }
+circularimageview = {module = "com.mikhaellopez:circularimageview" ,version.ref = "circularimageview"}
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+dagger = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+safeargs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "safeargs" }
+parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin-parcelize" }
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+serialization = { id = "serialization", version.ref = "serialization" }
+serialization-plugin = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization" }
+crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "crashlytics" }
+firebase-perf = { id = "com.google.firebase.firebase-perf", version.ref = "firebasePerf" }

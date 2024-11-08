@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/allContactsFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.contacts.AllContacts.AllContactsFragment"
+        android:label="fragment_all_contacts"
+        tools:layout="@layout/fragment_all_contacts" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.more.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" >
+        <action
+            android:id="@+id/action_moreFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.schedule.ScheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/addContactsFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.contacts.AddContacts.AddContactsFragment"
+        android:label="fragment_add_contacts"
+        tools:layout="@layout/fragment_add_contacts" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile"
+        >
+
+        <action
+            android:id="@+id/action_profileFragment_to_rateUsFragment"
+            app:destination="@id/rateUsFragment"
+            app:popUpTo="@id/profileFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/rateUsFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.rateUs.RateUsFragment"
+        android:label="fragment_rate_us"
+        tools:layout="@layout/fragment_rate_us" />
+    <fragment
+        android:id="@+id/timeSlipsHistory"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.timeslip.TimeSlipsHistory.TimeSlipsHistory"
+        android:label="fragment_time_slips_history"
+        tools:layout="@layout/fragment_time_slips_history" />
+    <dialog
+        android:id="@+id/timeSlipFilterBottomSheetFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.timeslip.TimeSlipsHistory.TimeSlipFilterBottomSheetFragment"
+        android:label="TimeSlipFilterBottomSheetFragment" >
+    </dialog>
+    <fragment
+        android:id="@+id/timeSlipHistoryDetail"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.timeslip.TimeSlipHistoryDetail.TimeSlipHistoryDetail"
+        android:label="fragment_time_slip_history_detail"
+        tools:layout="@layout/fragment_time_slip_history_detail" />
+    <fragment
+        android:id="@+id/timeClockFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.timeclock.TimeClockFragment"
+        android:label="fragment_time_clock"
+        tools:layout="@layout/fragment_time_clock" />
+    <fragment
+        android:id="@+id/contactDetailsFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.contacts.contactDetails.ContactDetailsFragment"
+        android:label="fragment_contact_details"
+        tools:layout="@layout/fragment_contact_details" />
+    <fragment
+        android:id="@+id/whoIsInFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.whoisin.WhoIsInFragment"
+        android:label="fragment_who_is_in"
+        tools:layout="@layout/fragment_who_is_in" />
+    <fragment
+        android:id="@+id/contactAllNotesFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.notes.Allnotes.ContactAllNotesFragment"
+        android:label="ContactAllNotesFragment" />
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.notes.AddNotes.AddNoteFragment"
+        android:label="fragment_add_note"
+        tools:layout="@layout/fragment_add_note" />
+    <fragment
+        android:id="@+id/invoicesFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.invoice.InvoiceHistory.InvoicesFragment"
+        android:label="fragment_invocies"
+        tools:layout="@layout/fragment_invocies" />
+    <fragment
+        android:id="@+id/invoiceDetailFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.invoice.InvoiceDetail.InvoiceDetailFragment"
+        android:label="fragment_invoice_detail"
+        tools:layout="@layout/fragment_invoice_detail" />
+
+
+</navigation>

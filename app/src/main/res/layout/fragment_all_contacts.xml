@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".presentation.ui.contacts.AllContacts.AllContactsFragment">
+
+
+    <com.sparkmembership.sparkowner.presentation.components.EditText
+        android:id="@+id/allContactSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_margin="@dimen/_12sdp"
+        android:drawableStart="@drawable/ic_search_icon"
+        android:drawablePadding="@dimen/_10sdp"
+        android:drawableTint="@color/colorAppTextSecondary"
+        android:hint="@string/search"
+        android:padding="@dimen/_6sdp"
+        android:paddingStart="@dimen/_12sdp"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/allContactSearchView"
+        android:layout_margin="@dimen/_12sdp"
+        android:background="@drawable/background_color_recylerview"
+        tools:listitem="@layout/item_contact"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notFoundDataLayout"
+        android:layout_margin="@dimen/_12sdp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_12sdp"
+            android:src="@drawable/all_contact_empty_state"
+            tools:listitem="@layout/item_contact"/>
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_contacts_by_this_name"
+            style="@style/textView_medium_secondary"
+            android:textSize="@dimen/_15sdp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_12sdp"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:src="@drawable/ic_add_item"
+        app:tint="@color/colorWhiteBlack"
+        app:shapeAppearanceOverlay="@style/fab_rounded_shape"
+        app:backgroundTint="@color/colorAccent"/>
+
+    <include
+        android:id="@+id/includedProgressLayout"
+        layout="@layout/layout_progressbar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

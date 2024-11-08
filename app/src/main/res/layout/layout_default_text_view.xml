@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/txtLabel"
+        style="@style/TextView_medium_primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:text="no label text available" />
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/edittext_rounded_border"
+        android:textColorHint="@color/colorAppTextSecondary"
+        style="@style/TextView_Regular_primary"
+        android:layout_marginBottom="@dimen/_4sdp" />
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/txtError"
+        style="@style/error_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:visibility="gone"
+        android:text="no error text available" />
+
+</LinearLayout>

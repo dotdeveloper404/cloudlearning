@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.splash.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.onboarding.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" />
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.signIn.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" />
+    <fragment
+        android:id="@+id/connectedLocationFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.location.ConnectedLocationFragment"
+        android:label="fragment_connected_location"
+        tools:layout="@layout/fragment_connected_location" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.sparkmembership.sparkowner.presentation.ui.forgotPassword.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" />
+</navigation>

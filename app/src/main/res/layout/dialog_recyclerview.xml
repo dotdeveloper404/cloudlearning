@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:padding="16dp">
+
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/cancel_icon"
+        android:paddingEnd="@dimen/_5sdp"
+        android:paddingStart="0dp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:text="@string/select_type"
+       style="@style/TextView_medium_primary"
+        />
+
+    <ImageView
+        android:id="@+id/cancel_icon"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:padding="@dimen/_2sdp"
+        android:src="@drawable/ic_cancel_icon" />
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/allContactSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_edittext_background"
+        android:drawableStart="@drawable/ic_search_icon"
+        android:drawablePadding="@dimen/_10sdp"
+        android:hint="@string/search"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:textColorHint="@color/colorAppTextPrimary"
+        android:textColor="@color/appTitleColor"
+        android:textSize="@dimen/_10sdp"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:visibility="gone"
+        android:layout_below="@id/dialog_title"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/poppins_medium"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        android:layout_below="@id/allContactSearchView"
+        android:layout_marginTop="8dp" />
+
+
+    <com.sparkmembership.sparkowner.presentation.components.CustomButton
+        android:id="@+id/btnSubmit"
+        style="@style/CustomButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@id/recyclerView"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:text="@string/Select" />
+
+    <ProgressBar
+        android:id="@+id/includedProgressLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>
+

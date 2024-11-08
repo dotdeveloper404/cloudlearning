@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/_12sdp"
+    tools:context=".presentation.ui.notes.AddNotes.AddNoteFragment">
+
+    <com.sparkmembership.sparkowner.presentation.components.DefaultTextView
+        android:id="@+id/selectQuickNoteSpinner"
+        style="@style/TextView_Regular_primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:hintText="@string/select_quick_note"
+        app:errorText="@string/please_select_notes"
+        app:labelText="@string/enter_your_notes"
+        android:textColorHint="@color/colorAppTextSecondary" />
+
+    <com.sparkmembership.sparkowner.presentation.components.EditText
+        android:id="@+id/noteText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:maxLines="6"
+        android:lines="6"
+        android:layout_marginEnd="@dimen/_1sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_below="@+id/selectQuickNoteSpinner"
+        android:focusable="true"
+        android:padding="@dimen/_5sdp"
+        android:focusableInTouchMode="true"
+        android:gravity="start|top"
+        />
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/follow_up_date_label"
+        style="@style/textview_regular_primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:text="@string/set_follow_up_date"
+        android:textStyle="bold"
+        android:layout_below="@+id/noteText"
+        />
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/follow_up_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/edittext_rounded_border"
+        android:drawableEnd="@drawable/icon_calendar2"
+        android:hint="@string/select_follow_up_date"
+        android:textColorHint="@color/colorAppTextSecondary"
+        android:padding="@dimen/_10sdp"
+        android:layout_below="@+id/follow_up_date_label"
+        style="@style/TextView_Regular_primary"
+        />
+
+    <com.sparkmembership.sparkowner.presentation.components.DefaultTextView
+        android:id="@+id/assignToSpinner"
+        style="@style/TextView_Regular_primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:labelText="@string/assign_to"
+        android:layout_below="@+id/follow_up_date"
+        app:hintText="@string/who_is_responsible_to_follow_up"
+        android:textColorHint="@color/colorAppTextSecondary" />
+
+
+    <com.sparkmembership.sparkowner.presentation.components.CustomButton
+        android:id="@+id/addNoteButton"
+        style="@style/logoutButtonstyle"
+        android:layout_width="match_parent"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/_30sdp"
+        android:text="@string/add_note"/>
+
+    <include
+        android:id="@+id/includedProgressLayout"
+        layout="@layout/layout_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+</RelativeLayout>

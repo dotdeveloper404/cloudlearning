@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_10sdp"
+    tools:context=".presentation.ui.more.MoreFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_5sdp"
+        app:cardMaxElevation="@dimen/_5sdp"
+        app:cardElevation="@dimen/_5sdp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:background="@color/colorPrimary">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/profileImage"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_placeholder"
+                app:borderWidth="1dp"
+                app:civ_border_color="@color/colorAccent"
+                app:civ_border_width="@dimen/_2sdp"
+                app:shapeAppearanceOverlay="@style/CircularShapeAppearance" />
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/profileImage"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <com.sparkmembership.sparkowner.presentation.components.TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ron_sell"
+                    style="@style/TextView_medium_primary"
+                    android:textSize="@dimen/_16ssp"
+                    />
+
+                <com.sparkmembership.sparkowner.presentation.components.TextView
+                    android:id="@+id/userLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/spark_membership"
+                    style="@style/textview_medium_accent"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_toEndOf="@id/profileImage"
+                    android:layout_below="@id/username"
+
+                    />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/goToProfile"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:src="@drawable/icon_right_arrow"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/_2sdp"
+                android:alpha="0.5"/>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:padding="@dimen/_10sdp"
+        android:id="@+id/recycler_view"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+</LinearLayout>

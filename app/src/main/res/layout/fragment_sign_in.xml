@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="16dp"
+    tools:context=".presentation.ui.signIn.SignInFragment">
+
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:src="@drawable/app_logo"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Email Input Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appLogo"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:endIconContentDescription=""
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/text_input_outline_color"
+        app:hintTextColor="@color/colorAppTextPrimary"
+        app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_10sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_10sdp"
+        app:boxCornerRadiusTopStart="@dimen/_10sdp"
+        app:boxStrokeWidth="@dimen/_1sdp"
+        app:placeholderTextColor="@color/colorAppTextPrimary"
+        app:cursorColor="@color/colorAppTextPrimary"
+        android:textColorHint="@color/colorAppTextPrimary"
+        app:boxCollapsedPaddingTop="@dimen/_20sdp"
+        app:endIconTint="@color/colorButton"
+        app:endIconMode="custom">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_edt"
+            style="@style/TextView_medium_primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email"
+            android:textColorHint="@color/colorAppTextPrimary"
+            android:textColor="@color/colorAppTextPrimary"
+            android:text="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Password Input Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailLayout"
+        android:layout_marginTop="16dp"
+        android:hint="@string/password"
+        app:endIconMode="password_toggle"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/text_input_outline_color"
+        app:hintTextColor="@color/colorAppTextPrimary"
+        app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_10sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_10sdp"
+        app:boxCornerRadiusTopStart="@dimen/_10sdp"
+        app:boxStrokeWidth="@dimen/_1sdp"
+        app:cursorColor="@color/colorAppTextPrimary"
+        app:placeholderTextColor="@color/colorAppTextPrimary"
+        android:textColorHint="@color/colorAppTextPrimary"
+        app:endIconTint="@color/colorAppTextPrimary"
+        app:boxCollapsedPaddingTop="@dimen/_20sdp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_edt"
+            style="@style/TextView_medium_primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:textColor="@color/colorAppTextPrimary"
+            android:textColorHint="@color/colorAppTextPrimary"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Forgot Password -->
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/forgotPassword"
+        style="@style/textview_medium_accent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordLayout"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/forgot_password" />
+
+    <!-- Sign In Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signInButton"
+        style="@style/CustomButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forgotPassword"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:text="@string/sign_in" />
+
+
+    <include
+        android:id="@+id/includedProgressLayout"
+        layout="@layout/layout_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/_10sdp"
+    android:background="@drawable/profile_background_image"
+    tools:context=".presentation.ui.profile.ProfileFragment">
+
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:src="@drawable/icon_back_white"/>
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        style="@style/textView_semi_bold_primary_white"
+        android:textColor="@android:color/white"
+        android:layout_toEndOf="@id/btn_back"
+        />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="@dimen/_5sdp"
+        android:background="@drawable/white_top_curve_background"
+        android:layout_marginTop="@dimen/_100sdp">
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ron_sell"
+            style="@style/TextView_medium_primary"
+            android:textSize="@dimen/_16ssp"
+            android:layout_marginTop="@dimen/_50sdp"
+            />
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:id="@+id/userLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spark_membership"
+            style="@style/textview_medium_accent"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            />
+
+
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_4sdp"
+            app:cardElevation="@dimen/_4sdp"
+            app:cardMaxElevation="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <LinearLayout
+                android:id="@+id/btn_change_password_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/curve_background"
+                android:padding="@dimen/_8sdp">
+
+
+                <ImageView
+                    android:id="@+id/listItemIcon"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_change_password" />
+
+                <com.sparkmembership.sparkowner.presentation.components.TextView
+                    android:id="@+id/listItemTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingEnd="0dp"
+                    android:text="Change Password"
+                    android:layout_marginBottom="-1dp"
+                    style="@style/TextView_Regular_primary"/>
+
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/icon_next" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_4sdp"
+            app:cardElevation="@dimen/_4sdp"
+            app:cardMaxElevation="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardBackgroundColor="@android:color/transparent"
+            >
+
+            <LinearLayout
+                android:id="@+id/btn_rate_us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/curve_background"
+                android:padding="@dimen/_8sdp">
+
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_rate_us" />
+
+                <com.sparkmembership.sparkowner.presentation.components.TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/rate_us"
+                    android:layout_marginBottom="-1dp"
+                    style="@style/TextView_Regular_primary"/>
+
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_next" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_4sdp"
+            app:cardElevation="@dimen/_4sdp"
+            app:cardMaxElevation="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardBackgroundColor="@android:color/transparent"
+            >
+
+            <LinearLayout
+                android:id="@+id/btn_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/curve_background"
+                android:padding="@dimen/_8sdp">
+
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_help" />
+
+                <com.sparkmembership.sparkowner.presentation.components.TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/help"
+                    android:layout_marginBottom="-1dp"
+                    style="@style/TextView_Regular_primary"/>
+
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_next" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_4sdp"
+            app:cardElevation="@dimen/_4sdp"
+            app:cardMaxElevation="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardBackgroundColor="@android:color/transparent"
+            >
+
+            <LinearLayout
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/curve_background_logout"
+                android:padding="@dimen/_8sdp">
+
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_logout" />
+
+                <com.sparkmembership.sparkowner.presentation.components.TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/logout"
+                    android:layout_marginBottom="-1dp"
+                    style="@style/textView_regular_primary_white"/>
+
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/_1sdp"
+                    android:src="@drawable/icon_next_white" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <com.sparkmembership.sparkowner.presentation.components.TextView
+            android:id="@+id/app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ver_1_0_0"
+            style="@style/textView_medium_secondary"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"/>
+    </LinearLayout>
+
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/image_placeholder"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageView
+        android:id="@+id/btnChooseImage"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/icon_profile_camera"
+        android:layout_toEndOf="@id/profile_image"
+        android:layout_marginStart="-40dp"
+        android:layout_marginTop="-50dp"
+        android:layout_below="@id/profile_image"
+       />
+
+
+    <include
+        android:id="@+id/includedProgressLayout"
+        layout="@layout/layout_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</RelativeLayout>

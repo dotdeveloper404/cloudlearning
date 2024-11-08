@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/_2sdp"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/colorBullet"
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:src="@drawable/icon_purple"/>
+
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/appointmentDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        style="@style/textview_regular_primary"
+        android:text="@string/hammad_calendar_2024_05_24"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_row_heading"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/_5sdp"
+    >
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/items"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:text="Coupon/Promo Code Discount (Frees): Percent Off 100.00"
+        style="@style/textview_regular_primary"
+
+        />
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/tv_item_qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/_12sdp"
+        style="@style/textview_regular_primary"
+        />
+
+    <com.sparkmembership.sparkowner.presentation.components.TextView
+        android:id="@+id/tv_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="$0.00"
+        style="@style/textview_regular_primary"
+        />
+</LinearLayout>
